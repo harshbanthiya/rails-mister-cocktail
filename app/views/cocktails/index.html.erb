@@ -1,14 +1,12 @@
 <h1>Cocktails</h1>
 <div id="new-resto"><%= link_to 'New cocktail', new_cocktail_path %></div>
 <div class="container">
-
- <% @cocktails.each do |cocktail| %>
+<% @cocktails.each do |cocktail| %>
  <h3><%= cocktail.name %></h3>
   <%= link_to 'Show', cocktail %> |
   <%= link_to 'Edit', edit_cocktail_path(cocktail) %> |
   <%= link_to 'Destroy', cocktail, method: :delete %>
   <% end %>
-    
 </div>
   
 
