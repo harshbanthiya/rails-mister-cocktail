@@ -3,15 +3,13 @@
 <div class="container">
 
  <% @cocktails.each do |cocktail| %>
-
- <div class="matter">
-  <h3><%= cocktail.name %></h3>
+ <h3><%= cocktail.name %></h3>
+  <%= link_to 'Show', cocktail %> |
+  <%= link_to 'Edit', edit_cocktail_path(cocktail) %> |
+  <%= link_to 'Destroy', cocktail, method: :delete %>
   <% end %>
-    <br> <br> 
-    <%= link_to 'Show', cocktail %> |
-    <%= link_to 'Edit', edit_cocktail_path(cocktail) %> |
-    <%= link_to 'Destroy', cocktail, method: :delete %> 
-  </div>
-  <% end %>
+    
 </div>
+  
+
 
