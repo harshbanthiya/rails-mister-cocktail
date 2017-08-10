@@ -1,2 +1,23 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class = "display_matter">
+	<h3><%= @cocktail.name %></h3>
+	<h4>Ingredient: </h4><strong><%= @cocktail.ingredient%></strong>
+	<h4>Dose: </h4><strong><%= @cocktail.dose%></strong>
+	<br> <br> 
+
+	<%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
+	<%= link_to 'Back', cocktails_path %>
+</div>
+
+<div class = "display_matter">
+	<h3>Current doses</h3>
+	<% @doses.each do |dose| %>
+	<% 5.times do |i| %>
+	<i id= "change-color-again" class="fa <%= dose.rating > i  ? 'fa-star' : 'fa-star-o' %>" aria-hidden="true"></i>
+	<% end %>
+	<br> <br>
+    <strong><%= dose.description %> </strong>
+	<br><br>
+    <% end %>
+</div>
+
+
