@@ -16,4 +16,4 @@ Ingredient.create(name: "ice")
 tomato = Ingredient.create(name: "tomato")
 
 Bloody_mary = Cocktail.create(name:"Bloody_mary")
-Dose.create(description: "Tomato sucks", cocktail:  Bloody_mary , ingredient: tomato )
+Dose.create(description: "Mix the ingredients and just drink.", cocktail:  Bloody_mary , ingredient: tomato )
