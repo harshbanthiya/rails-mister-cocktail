@@ -1,3 +1,36 @@
-// Place all the styles related to the cocktails controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+	background-color: rgb(17,124,242);
+}
+
+#container {
+	display: flex;
+    justify-content: space-around;
+}
+
+.item {
+	color:#fff58a;
+	text-align:center;
+	background-color:transparent;
+	font-family: 'Bungee', cursive;
+}
+h3{
+	color:#fbfbfb;
+	font-family: 'Bungee', cursive;
+}
+
+
+a:visited {color:#fbfbfb;}  
+a:hover {color:#fbfbfb;}  
+a:active {color:#fbfbfb;}
+
+h1{
+	font-family: 'Bungee', cursive;
+	color: white;
+}
+
+a{
+	color: #fbfbfb;
+	text-decoration:none;
+	font-family: 'Bungee', cursive;
+}
+

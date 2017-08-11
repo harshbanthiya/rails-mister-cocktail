@@ -1,6 +1,21 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
+<div class="container">
+<%= simple_form_for @cocktail do |f| %>
+  <h3><%= f.input :name %><h3>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit %>
-<% end %>
+  <div id="doses" class="items">
+    <%= f.simple_fields_for :doses do |dose| %>
+      <%= render 'dose_fields', f: dose %>
+    	<div class="links">
+      <br>
+     		<%= link_to_add_association 'add Doses and Ingredients', f, :doses %>
+    	</div>
+    <% end %>
+  </div>
+  <br>
+  <div><%=f.button :submit , class: "btn btn-primary" %> |  
+  <%= link_to 'Back', cocktails_path%> </div>
+
+  
+ <% end %>
+ </div>

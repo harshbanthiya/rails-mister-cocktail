@@ -1,13 +1,18 @@
-<h1>Cocktails</h1>
-<div id="new-resto"><%= link_to 'New cocktail', new_cocktail_path %></div>
-<div class="container">
-<% @cocktails.each do |cocktail| %>
- <h3><%= cocktail.name %></h3>
-  <%= link_to 'Show', cocktail %> |
-  <%= link_to 'Edit', edit_cocktail_path(cocktail) %> |
-  <%= link_to 'Destroy', cocktail, method: :delete %>
-  <% end %>
+
+<h1>Cocktails Limited.</h1>
+<div id="add"><%= link_to 'New cocktail', new_cocktail_path %></div>
+
+<div class="row">
+ <% @cocktails.each do |cocktail| %>
+    <div class="item col-md-4 col-xs-12">
+			<%= cl_image_tag cocktail.photo.url(:standard)%>
+			<h2><%= cocktail.name %></h2>
+			<%= link_to 'Show', cocktail %> |
+			<%= link_to 'Edit', edit_cocktail_path(cocktail) %> |
+			<%= link_to 'Destroy', cocktail, method: :delete %> 
+	</div>
+
+<% end %>
 </div>
-  
 
 
